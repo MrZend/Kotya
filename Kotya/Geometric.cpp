@@ -13,5 +13,5 @@ double Geometric::GetNum(int n)
 
 double Geometric::GetSum(int n)
 {
-	return (firstElem * (1-pow(q, n))) / 1 - q;
+	return ((firstElem * (1 - pow(q, n))) / (1 - q));
 }

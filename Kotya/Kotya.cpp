@@ -4,12 +4,12 @@
 
 int main()
 {
-    Series base = Series();
-    base.GetInfo();
+    Series *base, *art, *geo;
+    base = new Series();
+    art = new Arithmetic();
+    geo = new Geometric(2, 2);
 
-    Arithmetic art = Arithmetic();
-    art.GetInfo();
-
-    Geometric geo = Geometric();
-    geo.GetInfo();
+    base->GetInfo();
+    art->GetInfo();
+    geo->GetInfo();
 }
