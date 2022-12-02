@@ -15,3 +15,8 @@ double Geometric::GetSum(int n)
 {
 	return ((firstElem * (1 - pow(q, n))) / (1 - q));
 }
+
+Geometric::~Geometric()
+{
+	std::cout << "\nGeometric destructor..." << std::endl;
+}

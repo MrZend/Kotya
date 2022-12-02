@@ -14,3 +14,8 @@ double Arithmetic::GetSum(int n)
 {
 	return ((firstElem + GetNum(n)) / 2) * n;
 }
+
+Arithmetic::~Arithmetic()
+{
+	std::cout << "\nArithmetic destructor..." << std::endl;
+}

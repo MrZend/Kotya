@@ -1,4 +1,5 @@
 #pragma once
+#include <iostream>
 
 class Series
 {
@@ -12,4 +13,6 @@ public:
 	virtual double GetNum(int n) = 0;
 
 	void GetInfo();
+
+	virtual ~Series();
 };

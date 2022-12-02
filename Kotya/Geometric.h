@@ -11,4 +11,6 @@ public:
 	double GetNum(int n);
 
 	double GetSum(int n);
+
+	~Geometric();
 };

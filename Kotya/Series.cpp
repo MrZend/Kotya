@@ -1,5 +1,4 @@
 #include "Series.h"
-#include <iostream>
 
 Series::Series(double firstElem)
 {
@@ -21,4 +20,9 @@ double Series::GetSum(int n)
 void Series::GetInfo()
 {
 	std::cout << "\nFirst elem: " << this->firstElem << "\nSumma of 10 numbers of series: " << this->GetSum(10) << "\nFifth element of series: " << this->GetNum(5) << std::endl;
+}
+
+Series::~Series()
+{
+	std::cout << "\nSeries destructor..." << std::endl;
 }
