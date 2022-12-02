@@ -20,4 +20,9 @@ int main()
 	{
 		sers[i]->GetInfo();
 	}
+
+	for (int i = 0; i < 4; i++)
+	{
+		delete sers[i];
+	}
 }
