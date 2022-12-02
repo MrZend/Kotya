@@ -2,14 +2,47 @@
 #include "Arithmetic.h"
 #include "Geometric.h"
 
+// 8
+//void foo(Series ser);
+
+// 11
+//void foo(Series& ser);
+
+// 12
+void foo(Series* ser);
+
 int main()
 {
-    Series *base, *art, *geo;
-    base = new Series();
-    art = new Arithmetic();
-    geo = new Geometric(2, 2);
+    // 9
+    //foo(Series());
+    //foo(Arithmetic());
 
-    base->GetInfo();
-    art->GetInfo();
-    geo->GetInfo();
+    // 11
+   /* Series* ser = new Series();
+    foo(*ser);
+    Arithmetic* art = new Arithmetic();
+    foo(*art);*/
+
+    // 12
+    Series* ser = new Series();
+    foo(ser);
+    Arithmetic* art = new Arithmetic();
+    foo(art);
+}
+
+// 8
+//void foo(Series ser)
+//{
+//    ser.GetInfo();
+//}
+
+// 11
+//void foo(Series &ser)
+//{
+//    ser.GetInfo();
+//}
+
+// 12
+void foo(Series* ser) {
+    ser->GetInfo();
 }
