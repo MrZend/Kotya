@@ -2,47 +2,22 @@
 #include "Arithmetic.h"
 #include "Geometric.h"
 
-// 8
-//void foo(Series ser);
-
-// 11
-//void foo(Series& ser);
-
-// 12
-void foo(Series* ser);
 
 int main()
 {
-    // 9
-    //foo(Series());
-    //foo(Arithmetic());
+	// Створювати об'єкт класу Series не можна, оскільки він став абстактним(має хоч один чистий віртуальний метод)
+    Series* sers[4];
 
-    // 11
-   /* Series* ser = new Series();
-    foo(*ser);
-    Arithmetic* art = new Arithmetic();
-    foo(*art);*/
+	for (int i = 0; i < 4; i++)
+	{
+		if (i % 2 == 0)
+			sers[i] = new Arithmetic(i+2);
+		else
+			sers[i] = new Geometric(2, i*4);
+	}
 
-    // 12
-    Series* ser = new Series();
-    foo(ser);
-    Arithmetic* art = new Arithmetic();
-    foo(art);
-}
-
-// 8
-//void foo(Series ser)
-//{
-//    ser.GetInfo();
-//}
-
-// 11
-//void foo(Series &ser)
-//{
-//    ser.GetInfo();
-//}
-
-// 12
-void foo(Series* ser) {
-    ser->GetInfo();
+	for (int i = 0; i < 4; i++)
+	{
+		sers[i]->GetInfo();
+	}
 }

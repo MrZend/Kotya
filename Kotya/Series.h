@@ -7,9 +7,9 @@ protected:
 public:
 	Series(double firstElem = 0);
 
-	virtual double GetSum(int n);
+	virtual double GetSum(int n) = 0;
 
-	virtual double GetNum(int n);
+	virtual double GetNum(int n) = 0;
 
 	void GetInfo();
 };
